@@ -1,0 +1,57 @@
+.footer-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $main-dark;
+}
+
+.container--footer {
+    display: flex;
+    position: relative;
+}
+
+#contacts {
+    display: block;
+    margin-top: 20px;
+    padding: 0;
+
+    font-style: normal;
+}
+
+.contacts__item+.contacts__item {
+    margin-top: 9px;
+}
+
+.contacts__post-address {
+    display: inline-block;
+
+    line-height: 1.5;
+    color: $main-light;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        color: $accent-color;
+    }
+
+    &:focus {
+        outline-color: transparent;
+        color: $accent-color;
+    }
+}
+
+.contacts__title {
+    line-height: 1.5;
+    color: $footer-contacts-font;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        color: $accent-color;
+    }
+
+    &:focus {
+        outline-color: transparent;
+        color: $accent-color;
+    }
+}

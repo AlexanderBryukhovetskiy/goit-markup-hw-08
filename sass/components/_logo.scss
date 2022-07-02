@@ -1,0 +1,25 @@
+//оформлення тексту ЛОГОТИПУ у header and footer
+
+.logo-text {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    color: $accent-color;
+    line-height: 1.19;
+
+    &:focus {
+        outline-color: transparent;
+    }
+}
+
+.logo-text--header {
+    color: $header-logo-font-color;
+}
+
+.logo-text--footer {
+    color: $main-light;
+
+    &:focus {
+            outline-color: transparent;
+    }
+}

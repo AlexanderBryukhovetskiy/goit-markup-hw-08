@@ -1,0 +1,38 @@
+//оформлення секції description
+.description {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.description-list {
+    display: flex;
+}
+
+.description-list .description-item+.description-item {
+    margin-left: 30px;
+}
+
+.descr-icon-space {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: $secondary-dark;
+}
+
+.description-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.description-text {
+    width: 270px;
+    color: $secondary-font-color;
+    line-height: 1.71;
+    margin-bottom: 0;
+}

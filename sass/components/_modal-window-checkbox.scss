@@ -1,0 +1,51 @@
+//    оформлення checkbox 
+.checkbox-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    line-height: calc(24/14);
+    color: $secondary-font-color;
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox-icon {
+    margin-right: 8px;
+
+    fill: #fff;
+
+    border: 2px solid $main-font-color;
+    border-radius: 2px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .checkbox:checked~& {
+        border-color: $accent-color;
+        background-color: $accent-color;
+    }
+}
+
+.checkbox-link {
+    text-decoration-line: underline;
+    color: #2196F3;
+}
