@@ -6,11 +6,16 @@ header {
 }
 
 .container--header {
+
+
+    
+    @media screen and (min-width: 1200px) {
     display: flex;
     padding-top: 0px;
     padding-bottom: 0px;
 
     align-items: center;
+    }
 }
 
 .header__link {
