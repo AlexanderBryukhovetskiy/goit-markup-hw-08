@@ -1,11 +1,14 @@
 //оформлення заголовків до секцій
 
 .section-title {
-    font-size: 36px;
-    line-height: 1.17;
 
-    text-align: center;
+    @include desktop {
+        font-size: 36px;
+        line-height: 1.17;
 
-    margin-top: 0;
-    margin-bottom: 50px;
+        text-align: center;
+
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
 }

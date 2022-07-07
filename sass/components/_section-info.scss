@@ -1,5 +1,9 @@
 //оформлення секції info
 .info {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
     display: block;
     padding-bottom: 94px;
 }

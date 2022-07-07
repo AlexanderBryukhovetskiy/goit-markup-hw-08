@@ -1,8 +1,11 @@
+@import "./utils/mixins";
 @import "./utils/variables";
+@import "./utils/reset";
+@import "./utils/visually-hidden";
+@import "./components/container";
 @import "./components/logo";
 @import "./components/page-header";
 @import "./components/sections-title";
-@import "./utils/visually-hidden";
 @import "./components/section-hero";
 @import "./components/modal-window-empty";
 @import "./components/modal-window-forms";

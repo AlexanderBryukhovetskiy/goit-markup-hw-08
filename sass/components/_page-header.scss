@@ -7,18 +7,69 @@ header {
 
 .container--header {
     
-
-    
     @media screen and (min-width: 1200px) {
     display: flex;
     padding-top: 0px;
     padding-bottom: 0px;
 
+    padding-left: 15px;
+    padding-right: 15px;
+
     align-items: center;
     }
 }
 
+
+.header-menu__max-width-767 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    min-height: 60px;
+    width: 100%;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    fill: $main-font-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        fill: $accent-color;
+    }
+}
+
+
+
+.header-menu__min-width-768 { 
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    min-height: 60px;
+
+    width: 100%;
+
+    //// hidden when mobile-menu is active
+    @media screen and (max-width:767px) { 
+        display: none;
+    }
+
+}  
+
+
+
 .header__link {
+
+    @include desktop {
     position: relative;
 
     display: block;
@@ -31,6 +82,7 @@ header {
     letter-spacing: 0.02em;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
     &:hover {
         color: $accent-color;
@@ -70,6 +122,8 @@ header {
 .underline::after,
 .header__link--current::after {
 
+    @include desktop {
+
     content: "";
 
     position: absolute;
@@ -80,7 +134,9 @@ header {
     height: 4px;
     border-radius: 2px;
     background-color: $accent-color;
+    }
 }
+
 
 //вирівнювання елементів у header
 .site-menu {
@@ -102,9 +158,14 @@ header {
 //.main-nav-list .item:not(last-child) {
 //    margin-right: 50px;}
 
+
 .header-contacts-list {
+
+    @include desktop {
     display: flex;
+
     margin-left: auto;
+    }
 }
 
 .header-contacts-list__item +.header-contacts-list__item {
