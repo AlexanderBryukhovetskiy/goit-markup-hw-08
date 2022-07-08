@@ -1,25 +1,60 @@
 //оформлення секції our-clients
 
 .container--clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .clients-list {
     display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include mobile {
+        margin-left: -30px;
+    }
 }
 
 .clients-list__item {
-    width: 170px;
-    height: 92px;
-
     background-color: #fff;
 
-    &+& {
-        margin-left: 30px;
+    @include screen-320-479px {
+        min-width: 290px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include mobile {
+        flex-basis: calc((100% - 4*15px) / 2);
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        &:nth-child(2n+1) {
+            margin-left: 30px;
+        }
+    }
+
+    @include tablet {
+        flex-basis: calc((100% - 6*15px) / 3);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        &:nth-child(3n+1) {
+            margin-left: 30px;
+        }
+    }
+
+    @include desktop {
+        flex-basis: calc((100% - 12*15px) / 6);
+
+        &:first-child {
+            margin-left: 30px;
+        }
     }
 }
 

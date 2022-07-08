@@ -1,6 +1,13 @@
 .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }   
 
     background-color: $secondary-dark;
 
@@ -9,35 +16,81 @@
 
 .team-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+
+    @include tablet {
+        margin-left: -30px;
+    }
 }
 
 .team-list__item {
-    flex-basis: calc(100%/4 - 30px);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
 
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
+
+    @include screen-320-479px {
+        min-width: 290px;
+    }
+
+    @include mobile {
+        max-width: 450px;
+    }
+
+    @include tablet {
+        flex-basis: calc((100% - 4*15px) / 2);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        &:nth-child(2n+1) {
+            margin-left: 30px;
+        }
+    }
+
+    @include desktop {
+        flex-basis: calc((100% - 8*15px) / 4);
+
+        &:first-child {
+            margin-left: 30px;
+        }
+    }
 }
 
 .team-list__item-border {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include mobile {
     padding-top: 30px;
     padding-bottom: 30px;
+    }
 }
 
 .team-list__item-name {
     margin-bottom: 10px;
-
+    
     font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24/20);
+
+    @include mobile {
     font-size: 16px;
-    line-height: 1.19;
+    line-height: calc(18.75/16);
+    }
 }
 
 .team-list__item-position {
     margin-bottom: 16px;
     color: $secondary-font-color;
+    font-size: 20px;
+    line-height: calc(24/20);   
+    
+    @include mobile {
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.19;
+    }
 }

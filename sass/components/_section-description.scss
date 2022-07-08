@@ -15,52 +15,53 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    
+
     @include tablet {
-    margin-left: 30px;
+        margin-left: -30px;
     }
 }
 
 .description-item {
-    border: 1px solid green;
+    @include screen-320-479px {
+        min-width: 290px;
+    }
 
     @include mobile {
-        display:block;
-        width: 450px;             
+        max-width: 450px;             
     }
     
     @include tablet {
-        width: calc((100% - 4*15px) / 2);
-        //margin-left: 30px;
+        flex-basis: calc((100% - 4*15px) / 2);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        &:nth-child(2n+1) {
+            margin-left: 30px;
+        }
     }
 
     @include desktop {
-        width: calc((100% - 8*15px) / 4);
+        flex-basis: calc((100% - 8*15px) / 4);
 
+        &:first-child {
+            margin-left: 30px;
+        }
     }
 }
 
-//.description-item+.description-item {
-   // @include mobile {
-   //     margin-top: 30px;
-   // }
-
-   // @include desktop {
-  //      margin-left: 30px;
-   // }
-//}
-
-.descr-icon-space {
+.description-icon-space {
     display: flex;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-bottom: 30px;
+
+    margin-bottom: 15px;
+
     justify-content: center;
     border-radius: 4px;
     background-color: $secondary-dark;
 
-    @include desktop {
-        
+    @include mobile {
+        margin-bottom: 30px;
     }
 }
 
@@ -69,12 +70,19 @@
     margin-bottom: 10px;
     margin-right: auto;
     margin-left: auto;
-    font-size: 14px;
-    line-height: calc(16.41/14);
+
     text-transform: uppercase;
 
-    @include desktop {
-        margin-left: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: calc(14/12);
+
+    @include mobile {
+        font-size: 14px;
+        line-height: calc(16.41/14);
+    }
+    @include tablet {
+        text-align:start;
 
     }
 }
@@ -82,11 +90,15 @@
 .description-text {
     width: 100%;
     color: $secondary-font-color;
-    line-height: 1.71;
     margin-bottom: 0;
 
+    font-size: 12px;
+    line-height: calc(20/12);
+    text-align: center;
 
-    @include desktop {
-        //width: 270px;
+    @include mobile {
+        font-size: 14px;
+        line-height: calc(24/14);
+        text-align:start;
     }
 }

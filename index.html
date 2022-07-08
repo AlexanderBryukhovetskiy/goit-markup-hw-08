@@ -16,87 +16,23 @@
 </head>
 
 <body>
-
-    <!--шапка сторінки-->
+<!--
     <header>
         <div class="container container--header">
             
-        <!--меню для мобільного телефону (max-width:767px)-->
 
-            <div class="header-menu__max-width-767">
-
-                <!--логотип-посилання-->
-                <a class="link logo-text" href="./index.html" id="top">Web<span class="logo-text--header">Studio</span></a>
-
-                <!--навігація по сайту/ головне меню-->
-                <nav class="site-menu">
-                    <button type="button" 
-                            class="menu-button is-open"
-                            aria-expended="false"
-                            aria-controls="menu-container"
-                            data-menu-button
-                    >
-                        <svg width="40" height="40" 
-                            aria-label="переключатель мобильного меню">
-                            <use href="./images/icons.svg#icon-menu" 
-                                    class="icon-menu"></use>
-                            <use href="./images/icons.svg#icon-cross" 
-                                    class="icon-cross"></use>
-                        </svg>
-                    </button>
-                    
-                    <div class="menu-container"
-                            id="menu-container"
-                            data-menu
-                    >
-                        <ul class="list main-nav-list">
-                            <li class="main-nav-list__item"><a class="link header__link header__link--current" href="#studio">Студия</a></li>
-                            <!--посилання на якір з інф. про студію-->
-                            <li class="main-nav-list__item"><a class="link header__link" href="./portfolio.html">Портфолио</a></li>
-                            <!--посилання на сторінку з портфоліо-->
-                            <li class="main-nav-list__item"><a class="link header__link" href="#contacts">Контакты</a></li>
-                            <!--посилання на якір контантів/футер сторінки -->
-                        </ul>
-                    </div>
-                </nav>
-                
-                
-                <ul class="list header-contacts-list">
-                    <li class="header-contacts-list__item">
-                
-                        <a class="link header__link header__link--contact" href="mailto:info@devstudio.com">
-                            <svg class="header-contacts-list__icon" width="16" height="12">
-                                <use href="./images/icons.svg#icon-envelope"></use>
-                            </svg>
-                            <span lang="en">info@devstudio.com</span>
-                        </a>
-                    </li>
-                
-                    <li class="header-contacts-list__item">
-                        <a class="link header__link header__link--contact" href="tel:+380961111111">
-                            <svg class="header-contacts-list__icon" width="16" height="12">
-                                <use href="./images/icons.svg#icon-smartphone"></use>
-                            </svg>
-                            <span>+38 096 111 11 11</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-    <!--меню для планшета та ПК (min-width:768px)-->
             <div class="header-menu__min-width-768">
 
-            <!--навігація по сайту/ головне меню-->
                 <nav class="site-menu">
 
-                    <!--логотип-посилання-->
                     <a class="link logo-text" href="./index.html" id="top">Web<span class="logo-text--header">Studio</span></a>
-                    
-                    
+                                        
                     <ul class="list main-nav-list">
-                        <li class="main-nav-list__item"><a class="link header__link underline" href="#studio">Студия</a></li>   <!--посилання на якір з інф. про студію-->
-                        <li class="main-nav-list__item"><a class="link header__link" href="./portfolio.html">Портфолио</a></li>               <!--посилання на сторінку з портфоліо-->
-                        <li class="main-nav-list__item"><a class="link header__link" href="#contacts">Контакты</a></li>                       <!--посилання на якір контантів/футер сторінки -->
+                        <li class="main-nav-list__item"><a class="link header__link underline" href="#studio">Студия</a></li>   
+                        
+                        <li class="main-nav-list__item"><a class="link header__link" href="./portfolio.html">Портфолио</a></li>               
+                        
+                        <li class="main-nav-list__item"><a class="link header__link" href="#contacts">Контакты</a></li>                       
                     </ul>
                 </nav>
                 
@@ -122,9 +58,57 @@
                 </ul>
             </div>
 
+                        <div class="header-menu__max-width-767">
+                        
+                            <a class="link logo-text" href="./index.html" id="top">Web<span class="logo-text--header">Studio</span></a>
+                        
+                            <nav class="site-menu">
+                                <button type="button" class="menu-button is-open" aria-expended="false" aria-controls="menu-container"
+                                    data-menu-button>
+                                    <svg width="40" height="40" aria-label="переключатель мобильного меню">
+                                        <use href="./images/icons.svg#icon-menu" class="icon-menu"></use>
+                                        <use href="./images/icons.svg#icon-cross" class="icon-cross"></use>
+                                    </svg>
+                                </button>
+                        
+                                <div class="menu-container" id="menu-container" data-menu>
+                                    <ul class="list main-nav-list">
+                                        <li class="main-nav-list__item"><a class="link header__link header__link--current"
+                                                href="#studio">Студия</a></li>
+                        
+                                        <li class="main-nav-list__item"><a class="link header__link" href="./portfolio.html">Портфолио</a></li>
+                        
+                                        <li class="main-nav-list__item"><a class="link header__link" href="#contacts">Контакты</a></li>
+                        
+                                    </ul>
+                                </div>
+                            </nav>
+                        
+                            <ul class="list header-contacts-list">
+                                <li class="header-contacts-list__item">
+                        
+                                    <a class="link header__link header__link--contact" href="mailto:info@devstudio.com">
+                                        <svg class="header-contacts-list__icon" width="16" height="12">
+                                            <use href="./images/icons.svg#icon-envelope"></use>
+                                        </svg>
+                                        <span lang="en">info@devstudio.com</span>
+                                    </a>
+                                </li>
+                        
+                                <li class="header-contacts-list__item">
+                                    <a class="link header__link header__link--contact" href="tel:+380961111111">
+                                        <svg class="header-contacts-list__icon" width="16" height="12">
+                                            <use href="./images/icons.svg#icon-smartphone"></use>
+                                        </svg>
+                                        <span>+38 096 111 11 11</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
         </div>
     </header>
-
+-->
     <main>
 
         <!--секція з кнопкою замовлення послуги-->
@@ -236,17 +220,16 @@
         </section>
 -->
 
-        <!--секція з основною інформацією про веб-студію-->
-
+        <!--секція з основною інформацією про веб-студію АДАПТОВАНО-->
+<!--
         <section class="description">
             
             <div class="container">
                 <h2 class="visually-hidden">Методы работы нашей веб-студии</h2>
 
-                <!-- контейнер з текстовими блоками-->
                 <ul class="list description-list">
                     <li class="description-item">
-                        <div class="descr-icon-space">
+                        <div class="description-icon-space">
                             <svg class="descr-icon" width="70" height="70">
                                 <use href="./images/icons.svg#icon-antenna-1"></use>
                             </svg>
@@ -258,7 +241,7 @@
                     </li>
 
                     <li class="description-item">
-                        <div class="descr-icon-space">
+                        <div class="description-icon-space">
                             <svg class="descr-icon" width="70" height="70">
                                 <use href="./images/icons.svg#icon-clock-1"></use>
                             </svg>
@@ -270,7 +253,7 @@
                     </li>
 
                     <li class="description-item">
-                        <div class="descr-icon-space">
+                        <div class="description-icon-space">
                             <svg class="descr-icon" width="70" height="70">
                                 <use href="./images/icons.svg#icon-diagram-1"></use>
                             </svg>
@@ -282,7 +265,7 @@
                     </li>
 
                     <li class="description-item">
-                        <div class="descr-icon-space">
+                        <div class="description-icon-space">
                             <svg class="descr-icon" width="70" height="70">
                                 <use href="./images/icons.svg#icon-astronaut-1"></use>
                             </svg>
@@ -296,7 +279,7 @@
                 </ul>
             </div>
         </section>
-
+-->
         <!--інформаційна секція АДАПТОВАНО-->
 <!--
         <section class="info">
@@ -325,7 +308,7 @@
         </section>
 -->
 
-        <!--секція з інформацією про персонал веб-студії-->
+        <!--секція з інформацією про персонал веб-студії  АДАПТОВАНО-->
 <!--
         <section class="team">
             <div class="container">
@@ -512,7 +495,7 @@
                 </ul>
             </div>
         </section>
--->
+    -->
 <!--
         <section class="our-clients">
             <div class="container container--clients">
@@ -571,18 +554,18 @@
 
             </div>
         </section>
-    -->
-    </main>
 
+    </main>
+-->
     <!--контактна інформація-->
-<!--
+
     <footer class="footer-section">
         <div class="container container--footer">
 
-            <div>    -->
+            <div class="footer-contacts">    
                 <!--обгортка для вирівнювання елементів блоку контактів футера-->
                 <!--логотип-посилання-->
-<!--                <a class="link logo-text" href="#top">Web<span class="logo-text--footer">Studio</span></a>
+                <a class="link logo-text" href="#top">Web<span class="logo-text--footer">Studio</span></a>
         
                 <address id="contacts">
                     <ul class="list">
@@ -660,7 +643,7 @@
             
         </div>
     </footer>
--->
+
     <script src="./js/modal.js"></script>
 </body>
 

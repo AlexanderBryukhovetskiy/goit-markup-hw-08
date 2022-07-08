@@ -4,12 +4,12 @@
     font-family: Raleway;
     font-weight: 700;
     font-size: 24px;
-    line-height: calc(28/24);
+    line-height: calc(28.18/24);
     color: $accent-color;
 
     @include desktop {
     font-size: 26px;
-    line-height:calc(31/26);
+    line-height:calc(30.52/26);
     }
 
     &:focus {

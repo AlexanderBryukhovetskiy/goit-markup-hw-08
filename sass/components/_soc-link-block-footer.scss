@@ -1,16 +1,39 @@
 //блок іконок соціальних мереж у footer
 
 .footer-soc-link-block {
-    padding-top: 12px;
-    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-start;
+
+    margin-top: 60px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex-basis: 50%;
+            margin-top: 5px;
+        }
+
+    @include desktop {
+        padding-top: 12px;
+        margin-top: 0px;
+        margin-left: 70px;
+        margin-bottom: 0;
+    }
 }
 
 .footer-title {
     margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 16px;
+    
     text-transform: uppercase;
     color: $main-light;
+
+    font-weight: 700;
+    line-height: calc(16.41/14);
+    text-align: center;
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
 //оформлення іконок у файлі 

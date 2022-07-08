@@ -1,9 +1,18 @@
 //форма підписки у футері
 
 .subscribe-form {
-    position: absolute;
-    right: 15px;
-    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 60px;
+
+
+    @include desktop {
+        display: block;
+        margin-top: 12px;
+        position: absolute;
+        right: 15px;
+    }
 }
 
 .subscribe-form__label {
@@ -13,11 +22,16 @@
     line-height: 16px;
     text-transform: uppercase;
     color: $main-light;
+    text-align: center;
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .subscribe-form__input {
-    min-width: 358px;
-    margin-right: 12px;
+    min-width: 290px;
+    margin-bottom: 20px;
     padding: 14px 16px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -28,6 +42,16 @@
     font-size: 16px;
     line-height: calc(20/16);
     color: rgba(255, 255, 255, 0.6);
+
+    @include mobile {
+        min-width: 450px;
+    }
+
+    @include desktop {
+        min-width: 358px;
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
 }
 
 .subscribe-form__btn {
