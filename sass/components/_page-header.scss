@@ -47,7 +47,9 @@ header {
     border: none;
     background-color: transparent;
 
-    z-index:1;
+    cursor: pointer;
+
+    z-index:2;
 
     fill: $main-font-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
