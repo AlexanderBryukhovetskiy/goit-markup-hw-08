@@ -219,10 +219,7 @@ header {
     
 }
 
-
-
-
-
+//mobile-menu had been done
 
 
 .header-menu__min-width-768 { 
@@ -237,14 +234,12 @@ header {
     @media screen and (max-width:767px) { 
         display: none;
     }
-
 }  
-
 
 
 .header__link {
 
-    @include desktop {
+    @include tablet {
     position: relative;
 
     display: block;
@@ -272,6 +267,15 @@ header {
 .header__link--contact {
     color: $secondary-font-color;
 
+    @media screen and (max-width: 1199px) {
+        display: block;
+        padding:0;
+        margin:0;
+        font-size: 12px;
+        line-height: calc(14.06/12);
+        
+    } 
+
     &:hover {
         color: $accent-color;
     }
@@ -296,9 +300,6 @@ header {
 //оформлення синього підкреслення активної сторінки у хедері
 .underline::after,
 .header__link--current::after {
-
-    @include desktop {
-
     content: "";
 
     position: absolute;
@@ -309,7 +310,7 @@ header {
     height: 4px;
     border-radius: 2px;
     background-color: $accent-color;
-    }
+    
 }
 
 
@@ -321,30 +322,32 @@ header {
 
 .main-nav-list {
     display: flex;
-    margin-left: 94px;
-}
-
-//встановлення відстаней між елементами навігації 
-.main-nav-list__item + .main-nav-list__item {
-    margin-left: 50px;
-}
-
-//АЛЬТЕРНАТИВНИЙ ВАРІАНТ:
-//.main-nav-list .item:not(last-child) {
-//    margin-right: 50px;}
-
-
-.header-contacts-list {
+    margin-left: 88px;
+    column-gap: 50px;
 
     @include desktop {
-    display: flex;
+        margin-left: 94px;
+    }
+}
 
+.header-contacts-list {
+    display: flex;
     margin-left: auto;
+
+    @media screen and (max-width: 1199px) {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+
     }
 }
 
 .header-contacts-list__item +.header-contacts-list__item {
     margin-left: 50px;
+
+    @media screen and (max-width: 1199px) {
+        margin-top: 10px;
+    }
 }
 
 .header-contacts-list__icon {

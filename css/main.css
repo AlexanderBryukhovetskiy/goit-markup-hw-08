@@ -351,7 +351,7 @@ header {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .header__link {
     position: relative;
     display: block;
@@ -376,6 +376,15 @@ header {
 .header__link--contact {
   color: #757575;
 }
+@media screen and (max-width: 1199px) {
+  .header__link--contact {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.1716666667;
+  }
+}
 .header__link--contact:hover {
   color: #2196F3;
 }
@@ -391,18 +400,16 @@ header {
   outline-color: transparent;
 }
 
-@media screen and (min-width: 1200px) {
-  .underline::after,
+.underline::after,
 .header__link--current::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #2196F3;
-  }
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196F3;
 }
 
 .site-menu {
@@ -418,24 +425,43 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 94px;
+  margin-left: 88px;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
 }
-
-.main-nav-list__item + .main-nav-list__item {
-  margin-left: 50px;
-}
-
 @media screen and (min-width: 1200px) {
+  .main-nav-list {
+    margin-left: 94px;
+  }
+}
+
+.header-contacts-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+@media screen and (max-width: 1199px) {
   .header-contacts-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
 .header-contacts-list__item + .header-contacts-list__item {
   margin-left: 50px;
+}
+@media screen and (max-width: 1199px) {
+  .header-contacts-list__item + .header-contacts-list__item {
+    margin-top: 10px;
+  }
 }
 
 .header-contacts-list__icon {
