@@ -1,18 +1,38 @@
 //оформлення меню кнопок сторінки Portfolio.html
 
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .filter-button-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
+    flex-wrap: wrap;
+    justify-content:center;
 
-.filter-button-list__item+.filter-button-list__item {
-    margin-left: 8px;
+    column-gap: 8px;
+    row-gap: 15px;
+
+    margin-bottom: 40px;
+
+    @include mobile {
+        justify-content: flex-start;
+    }
+        
+    @include tablet {
+        margin-bottom: 30px;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    @include desktop {
+        margin-bottom: 50px;
+    }
 }
 
 .filter-button-list__button {
