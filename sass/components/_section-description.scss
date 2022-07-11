@@ -1,5 +1,8 @@
 //оформлення секції description
 .description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
     @include mobile {
         padding-top: 60px;
         padding-bottom: 60px;

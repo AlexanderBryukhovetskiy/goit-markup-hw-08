@@ -104,8 +104,12 @@ header {
     letter-spacing: 0.02em;
     text-align: start;
 
-}
+    header {
+        position:absolute;
+        top:0;
+    }
 
+}
 
 .mob-header-contacts {
     display: flex;
@@ -222,6 +226,10 @@ header {
     line-height: calc(22/18);
     }
     
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 //mobile-menu had been done
