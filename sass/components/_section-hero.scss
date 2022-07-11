@@ -1,11 +1,16 @@
 //оформлення секції hero
 
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
     background-color: $main-dark;
     text-align: center;
+
+    @include desktop {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
 }
 
 //фонове зображення
@@ -25,7 +30,8 @@
 }
 
 .hero-title {
-    width: 696px;
+    width: 290px;
+
     margin-top: 0;
     margin-bottom: 30px;
     margin-right: auto;
@@ -33,10 +39,23 @@
 
     color: $main-light;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    font-size: 20px;
+    line-height: calc(28/20);
+
+    @include mobile {
+        width: 360px;
+        font-size: 26px;
+        line-height: calc(42/26);
+    }
+
+    @include desktop {
+        width: 696px;
+        font-size: 44px;
+        line-height: calc(60/44);
+    }
 }
 
 .hero-btn {
@@ -62,4 +81,4 @@
     color: $main-light;
     
     cursor: pointer;
-}
+} 

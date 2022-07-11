@@ -10,15 +10,13 @@ header {
 .container--header {
     padding-top: 10px;
     padding-bottom: 10px;
+    align-items: center;
 
-
-    @media screen and (min-width: 1200px) {
+    @include tablet {
     display: flex;
-    padding-top: 0px;
-    padding-bottom: 0px;
 
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
 
     align-items: center;
     }
@@ -26,21 +24,23 @@ header {
 
 //оформлення мобільного меню у хедері
 .header-menu__max-width-767 {
-   // position: relative;
+    position: relative;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     
-    min-height: 60px;
+    height: 100%;
     width: 100%;
 
+    overflow-y: no-scroll;
     @media screen and (min-width:768px) {
         display: none;
     }
 }
 
 .menu-button {
+
     display: inline-flex;
     margin: 0;
     padding: 0;
@@ -49,7 +49,7 @@ header {
 
     cursor: pointer;
 
-    z-index:3;
+    z-index: 2;
 
     fill: $main-font-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,6 +71,9 @@ header {
     display: none;
 }
 
+.menu-button.is-hidden {
+    display:none;
+}
 
 .menu-container {
     display: none;
@@ -84,11 +87,12 @@ header {
 
     overflow: auto;
 
-    z-index:2;
+    z-index: 1;
             
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+
     padding: 40px 48px;
 
     background-color: #fff;
@@ -101,6 +105,7 @@ header {
     text-align: start;
 
 }
+
 
 .mob-header-contacts {
     display: flex;
@@ -239,7 +244,6 @@ header {
 
 .header__link {
 
-    @include tablet {
     position: relative;
 
     display: block;
@@ -250,9 +254,9 @@ header {
     line-height: 1.14;
     color: $main-font-color;
     letter-spacing: 0.02em;
-
+    
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+
 
     &:hover {
         color: $accent-color;
@@ -283,6 +287,13 @@ header {
     &:focus {
         outline: none;
         color: $accent-color;
+    }
+
+    @include desktop {
+        &:last-child {
+            padding-top:30px;
+            padding-bottom: 30px;
+        }
     }
 }
 
@@ -333,12 +344,12 @@ header {
 .header-contacts-list {
     display: flex;
     margin-left: auto;
+    align-items: center;
 
     @media screen and (max-width: 1199px) {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
-
     }
 }
 
@@ -347,11 +358,12 @@ header {
 
     @media screen and (max-width: 1199px) {
         margin-top: 10px;
+        margin-left: 0;
     }
 }
 
 .header-contacts-list__icon {
-    margin-right: 10px;
+    margin-right: 8px;
 
     fill: currentColor;
 
@@ -359,5 +371,28 @@ header {
 
     &:hover, &:focus {
         fill: currentColor;
+    }
+
+    @include desktop {
+        margin-right: 10px;
+    }
+}
+
+.header-contacts-list__icon--email {
+    width: 14px;
+    height: 10px;
+    
+    @include desktop {
+    width: 16px;
+    height: 12px;
+    };
+}
+
+.header-contacts-list__icon--tel {
+    width: 10px;
+    height: 14px;
+
+    @include desktop {
+        height: 16px;
     }
 }
