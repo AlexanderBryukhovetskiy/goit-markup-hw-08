@@ -54,7 +54,7 @@
 
             <div class="header-menu__max-width-767">
             
-                <a class="link logo-text" href="./index.html" id="top">Web<span class="logo-text--header">Studio</span></a>
+                <a class="link logo-text" href="./index.html">Web<span class="logo-text--header">Studio</span></a>
                 
                 <button type="button" 
                         class="menu-button" 
@@ -238,7 +238,6 @@
             
         </section>
 
-
         <!--секція з основною інформацією про веб-студію АДАПТОВАНО-->
 
         <section class="description">
@@ -306,19 +305,39 @@
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="list info-list">
                     <li class="info-list__item">
-                    
-                        <img src="./images/image1.jpg" alt="рабочий стол" width="370">
+                        <img 
+                            srcset="./images/info-img-1-370px.jpg    1x,
+                                    ./images/info-img-1-370px-2x.jpg 2x
+                                    "
+                        
+                            src="./images/info-img-1-370px.jpg" 
+                            alt="рабочий стол" 
+                            width="370"
+                        >
                         <p class="info-list__item-title">Десктопные приложения</p>
-                    
                     </li>
                     
                     <li class="info-list__item">
-                        <img src="./images/image2.jpg" alt="экран ноутбука" width="370">
+                        <img 
+                            srcset="./images/info-img-2-370px.jpg    1x,
+                                    ./images/info-img-2-370px-2x.jpg 2x
+                                    " 
+                            src="./images/info-img-2-370px.jpg" 
+                            alt="экран ноутбука" 
+                            width="370"
+                        >
                         <p class="info-list__item-title">Мобильные приложения</p>
                     </li>
                     
                     <li class="info-list__item">
-                        <img src="./images/image3.jpg" alt="планшет" width="370">
+                        <img 
+                            srcset="./images/info-img-3-370px.jpg    1x,
+                                    ./images/info-img-3-370px-2x.jpg 2x
+                                    " 
+                            src="./images/info-img-3-370px.jpg" 
+                            alt="планшет" 
+                            width="370"
+                        >
                         <p class="info-list__item-title">Дизайнерские решения</p>
                     </li>
                 </ul>
@@ -334,8 +353,32 @@
 
                 <ul class="list team-list">
                     <li class="team-list__item">
-                        <img src="./images/card1.jpg" alt="Игорь Демьяненко. Product Designer" width="270">
-                        
+                        <picture>
+                            <source 
+                                srcset="./images/team-card-1-desktop-270px.jpg    1x,
+                                        ./images/team-card-1-desktop-270px-2x.jpg 2x
+                                        "
+                                media="(min-width: 1200px)"
+                            />
+                            <source
+                                srcset="./images/team-card-1-tablet-354px.jpg    1x,
+                                        ./images/team-card-1-tablet-354px-2x.jpg 2x
+                                        "
+                                media="(min-width: 768px)"
+                            />
+                            <source 
+                                srcset="./images/team-card-1-mobile-450px.jpg    1x,
+                                        ./images/team-card-1-mobile-450px-2x.jpg 2x
+                                        " 
+                                media="(min-width: 480px)"
+                            />
+                            
+                            <img src="./images/team-card-1-mobile-450px.jpg" 
+                                alt="Игорь Демьяненко. Product Designer"
+                            >
+                            
+                        </picture>
+
                         <div class="team-list__item-border">
                             <h3 class="team-list__item-name">Игорь Демьяненко</h3>
                             <p class="team-list__item-position" lang="en">Product Designer</p>
@@ -379,8 +422,28 @@
                     </li>
 
                     <li class="team-list__item">
-                        <img src="./images/card2.jpg" alt="Ольга Репина. Frontend Developer" width="270">
+                        <picture>
+                            <source 
+                                srcset="./images/team-card-2-desktop-270px.jpg    1x,
+                                        ./images/team-card-2-desktop-270px-2x.jpg 2x
+                                        " 
+                                media="(min-width: 1200px)" 
+                            />
+                            <source 
+                                srcset="./images/team-card-2-tablet-354px.jpg    1x,
+                                        ./images/team-card-2-tablet-354px-2x.jpg 2x
+                                    "
+                                media="(min-width: 768px)" 
+                            />
+                            <source srcset="./images/team-card-2-mobile-450px.jpg    1x,
+                                            ./images/team-card-2-mobile-450px-2x.jpg 2x
+                                            " 
+                                    media="(min-width: 480px)" />
                         
+                            <img src="./images/team-card-2-mobile-450px.jpg" 
+                                alt="Ольга Репина. Frontend Developer"
+                            >
+                        </picture>
                         <div class="team-list__item-border">
                             <h3 class="team-list__item-name">Ольга Репина</h3>
                             <p class="team-list__item-position" lang="en">Frontend Developer</p>
@@ -424,7 +487,28 @@
                     </li>
 
                     <li class="team-list__item">
-                        <img src="./images/card3.jpg" alt="Николай Тарасов. Marketing" width="270">
+                        <picture>
+                            <source 
+                                srcset="./images/team-card-3-desktop-270px.jpg    1x,
+                                        ./images/team-card-3-desktop-270px-2x.jpg 2x
+                                        " 
+                                media="(min-width: 1200px)" 
+                            />
+                            <source 
+                                srcset="./images/team-card-3-tablet-354px.jpg    1x,
+                                        ./images/team-card-3-tablet-354px-2x.jpg 2x
+                                        " 
+                                media="(min-width: 768px)" 
+                            />
+                            <source 
+                                srcset="./images/team-card-3-mobile-450px.jpg    1x,
+                                        ./images/team-card-3-mobile-450px-2x.jpg 2x
+                                        " 
+                                media="(min-width: 480px)" />
+                            <img src="./images/team-card-3-mobile-450px.jpg" 
+                                alt="Николай Тарасов. Marketing">
+                        </picture>
+
 
                         <div class="team-list__item-border">
                             <h3 class="team-list__item-name">Николай Тарасов</h3>
@@ -468,8 +552,28 @@
                     </li>
 
                     <li class="team-list__item">
-                        <img src="./images/card4.jpg" alt="Михаил Ермаков. UI Designer" width="270">
-                        
+                        <picture>
+                            <source 
+                                srcset="./images/team-card-4-desktop-270px.jpg    1x,
+                                        ./images/team-card-4-desktop-270px-2x.jpg 2x
+                                        " 
+                                    media="(min-width: 1200px)" 
+                            />
+                            <source 
+                                srcset="./images/team-card-4-tablet-354px.jpg    1x,
+                                            ./images/team-card-4-tablet-354px-2x.jpg 2x
+                                            "
+                                        media="(min-width: 768px)" 
+                            />
+                            <source 
+                                srcset="./images/team-card-4-mobile-450px.jpg    1x,
+                                        ./images/team-card-4-mobile-450px-2x.jpg 2x
+                                        " 
+                                    media="(min-width: 480px)" 
+                            />
+                            <img src="./images/team-card-4-mobile-450px.jpg" 
+                                alt="Михаил Ермаков. UI Designer">
+                        </picture>
                         <div class="team-list__item-border">
                             <h3 class="team-list__item-border-name">Михаил Ермаков</h3>
                             <p class="team-list__item-position" lang="en">UI Designer</p>

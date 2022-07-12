@@ -57,7 +57,7 @@
             
             <div class="header-menu__max-width-767">
             
-                <a class="link logo-text" href="./index.html" id="top">Web<span class="logo-text--header">Studio</span></a>
+                <a class="link logo-text" href="./index.html">Web<span class="logo-text--header">Studio</span></a>
             
                 <button type="button" class="menu-button" aria-expended="false" aria-controls="menu-container" data-menu-button>
                     <svg width="40" height="40" aria-label="переключатель мобильного меню">
@@ -140,9 +140,30 @@
                     <li class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio1.jpg" alt="интернет-магазин на экране ноутбука" width="370">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio-1-desktop-370px.jpg    1x,
+                                                ./images/portfolio-1-desktop-370px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-1-tablet-354px.jpg    1x,
+                                                ./images/portfolio-1-tablet-354px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-1-mobile-450px.jpg    1x,
+                                                ./images/portfolio-1-mobile-450px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-1-mobile-450px.jpg" 
+                                        alt="интернет-магазин на экране ноутбука"
+                                    >
+                                </picture>
                                 <p class="portfolio-list__item-thumb-descr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>    
-                                
                             </div> 
                             
                             <div class="portfolio-list__item-title-border">
@@ -154,12 +175,32 @@
                     <li  class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio2.jpg" alt="постер баскетбольного матча" width="370">
+                                <picture>
+                                    <source 
+                                        srcset="./images/portfolio-2-desktop-370px.jpg    1x,
+                                                ./images/portfolio-2-desktop-370px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source srcset="./images/portfolio-2-tablet-354px.jpg    1x,
+                                                    ./images/portfolio-2-tablet-354px-2x.jpg 2x
+                                                    " 
+                                            media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source srcset="./images/portfolio-2-mobile-450px.jpg    1x,
+                                                    ./images/portfolio-2-mobile-450px-2x.jpg 2x
+                                                    " 
+                                            media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-2-mobile-450px.jpg" 
+                                        alt="постер баскетбольного матча"
+                                    >
+                                </picture>
                                 <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, expedita. In architecto sint atque, minus magnam autem fugit quae eius, nesciunt laboriosam odio sed aspernatur!</p>
                             </div>
 
                             <div class="portfolio-list__item-title-border">
-                                <h2 class="portfolio-list__item-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+                                <h2 class="portfolio-list__item-title">Постер <span lang="en">New Orlean vs Golden <span class="portfolio-item_span" lang="en"></span>Star</span></h2>
                                 <p class="portfolio-list__item-description">Дизайн</p>
                             </div>
                         </a>
@@ -167,8 +208,31 @@
                     <li  class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio3.jpg" alt="название ресторана на фоне изображения рыбы" width="370">
-                                <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aspernatur corrupti debitis velit eveniet vel recusandae obcaecati minus dolores reiciendis. Sed voluptatum sequi nesciunt reiciendis.</p>
+                                <picture>
+                                    <source 
+                                        srcset="./images/portfolio-3-desktop-370px.jpg    1x,
+                                                ./images/portfolio-3-desktop-370px-2x.jpg 2x
+                                                "
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-3-tablet-354px.jpg    1x,
+                                                ./images/portfolio-3-tablet-354px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-3-mobile-450px.jpg    1x,
+                                                ./images/portfolio-3-mobile-450px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-3-mobile-450px.jpg" 
+                                        alt="название ресторана на фоне изображения рыбы"
+                                    >
+                                </picture>
+                                <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
+                                    expedita. In architecto sint atque, minus magnam autem fugit quae eius, nesciunt laboriosam odio sed aspernatur!</p>
                             </div>
 
                             <div class="portfolio-list__item-title-border">
@@ -180,7 +244,29 @@
                     <li  class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio4.jpg" alt="наушники" width="370">
+                                <picture>
+                                    <source 
+                                        srcset="./images/portfolio-4-desktop-370px.jpg    1x,
+                                                ./images/portfolio-4-desktop-370px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-4-tablet-354px.jpg    1x,
+                                                ./images/portfolio-4-tablet-354px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-4-mobile-450px.jpg    1x,
+                                                ./images/portfolio-4-mobile-450px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-4-mobile-450px.jpg" alt="наушники"
+                                    >
+                                </picture>
+                                
                                 <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aspernatur corrupti debitis
                                     velit eveniet vel recusandae obcaecati minus dolores reiciendis. Sed voluptatum sequi nesciunt reiciendis.</p>
                             </div>
@@ -194,7 +280,28 @@
                     <li  class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio5.jpg" alt="2 коробочки разного размера" width="370">
+                                <picture>
+                                    <source 
+                                        srcset="./images/portfolio-5-desktop-370px.jpg    1x,
+                                                ./images/portfolio-5-desktop-370px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-5-tablet-354px.jpg    1x,
+                                                ./images/portfolio-5-tablet-354px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-5-mobile-450px.jpg    1x,
+                                                ./images/portfolio-5-mobile-450px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-5-mobile-450px.jpg" alt="2 коробочки разного размера">
+                                </picture>
+
                                 <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aspernatur corrupti debitis
                                 velit eveniet vel recusandae obcaecati minus dolores reiciendis. Sed voluptatum sequi nesciunt reiciendis.</p>
                             </div>
@@ -208,7 +315,27 @@
                     <li  class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio6.jpg" alt="моноблок с демонстрацией сайта" width="370">
+                                <picture>
+                                    <source 
+                                        srcset="./images/portfolio-6-desktop-370px.jpg    1x,
+                                                ./images/portfolio-6-desktop-370px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-6-tablet-354px.jpg    1x,
+                                                ./images/portfolio-6-tablet-354px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-6-mobile-450px.jpg    1x,
+                                                ./images/portfolio-6-mobile-450px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-6-mobile-450px.jpg" alt="моноблок с демонстрацией сайта">
+                                </picture>
                                 <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aspernatur corrupti debitis
                                     velit eveniet vel recusandae obcaecati minus dolores reiciendis. Sed voluptatum sequi nesciunt reiciendis.</p>
                             </div>
@@ -222,7 +349,27 @@
                     <li  class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio7.jpg" alt="разворот открытой книги с иллюстрациями" width="370">
+                                <picture>
+                                    <source 
+                                        srcset="./images/portfolio-7-desktop-370px.jpg    1x,
+                                                ./images/portfolio-7-desktop-370px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-7-tablet-354px.jpg    1x,
+                                                ./images/portfolio-7-tablet-354px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-7-mobile-450px.jpg    1x,
+                                                ./images/portfolio-7-mobile-450px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-7-mobile-450px.jpg" alt="разворот открытой книги с иллюстрациями">
+                                </picture>
                                 <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aspernatur corrupti debitis
                                     velit eveniet vel recusandae obcaecati minus dolores reiciendis. Sed voluptatum sequi nesciunt reiciendis.</p>
                             </div>
@@ -236,7 +383,27 @@
                     <li  class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio8.jpg" alt="ярлык с надписью LAB EL TAG" width="370">
+                                <picture>
+                                    <source 
+                                        srcset="./images/portfolio-8-desktop-370px.jpg    1x,
+                                                ./images/portfolio-8-desktop-370px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-8-tablet-354px.jpg    1x,
+                                                ./images/portfolio-8-tablet-354px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-8-mobile-450px.jpg    1x,
+                                                ./images/portfolio-8-mobile-450px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-8-mobile-450px.jpg" alt="ярлык с надписью LAB EL TAG">
+                                </picture>
                                 <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aspernatur corrupti debitis
                                     velit eveniet vel recusandae obcaecati minus dolores reiciendis. Sed voluptatum sequi nesciunt reiciendis.</p>
                             </div>
@@ -250,7 +417,27 @@
                     <li  class="portfolio-list__item">
                         <a href="" class="link portfolio-list__item-link">
                             <div class="portfolio-list__item-img-thumb">
-                                <img src="./images/portfolio9.jpg" alt="работа руками на нетбуке" width="370">
+                                <picture>
+                                    <source 
+                                        srcset="./images/portfolio-9-desktop-370px.jpg    1x,
+                                                ./images/portfolio-9-desktop-370px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-9-tablet-354px.jpg    1x,
+                                                ./images/portfolio-9-tablet-354px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 768px), (max-width: 479px)" 
+                                    />
+                                    <source 
+                                        srcset="./images/portfolio-9-mobile-450px.jpg    1x,
+                                                ./images/portfolio-9-mobile-450px-2x.jpg 2x
+                                                " 
+                                        media="(min-width: 480px)" 
+                                    />
+                                    <img src="./images/portfolio-9-mobile-450px.jpg" alt="работа руками на нетбуке">
+                                </picture>
                                 <p class="portfolio-list__item-thumb-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aspernatur corrupti debitis
                                     velit eveniet vel recusandae obcaecati minus dolores reiciendis. Sed voluptatum sequi nesciunt reiciendis.</p>
                             </div>
